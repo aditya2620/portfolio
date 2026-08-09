@@ -23,7 +23,7 @@ export const Header = () => {
           transition={{ type: "spring", stiffness: 300 }}
         />
         <Link to="/" className="header-title" onClick={() => setIsMenuOpen(false)}>
-          DevStudio
+          Aditya Basanti
         </Link>
       </div>
 
