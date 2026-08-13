@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import "./Project.css";
-import ecommerce from "../assets/e-commerce.jpeg";
-import quiz from "../assets/quiz.jpeg";
-import portfolio from "../assets/portfolio.jpeg";
 import { Search, ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -11,7 +8,7 @@ const projects = [
     name: "TinyCommand.com",
     description:
       "A no-code workflow automation platform. Developed reusable frontend components, built UI integrations, and consumed REST APIs utilizing React.js, TypeScript, and Agile sprint planning methodologies.",
-    image: quiz,
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop",
     languages: ["React.js", "TypeScript", "REST APIs", "Agile"],
     category: "React",
     link: "https://TinyCommand.com",
@@ -20,7 +17,7 @@ const projects = [
     name: "Pharmacy Management System",
     description:
       "Migrated an existing Pharmacy Management System to SQL Server for improved application performance utilizing Cursor and Antigravity IDEs. Developed modules and optimized database queries.",
-    image: ecommerce,
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600&auto=format&fit=crop",
     languages: ["React.js", "Node.js", "SQL Server", "Cursor IDE", "Antigravity IDE"],
     category: "JavaScript",
     link: null,
@@ -29,27 +26,36 @@ const projects = [
     name: "Quiz App",
     description:
       "A comprehensive quiz web application with a focus on user authentication, real-time quiz functionality, and detailed result tracking. The application is built from scratch without using external APIs, with all quiz questions created manually",
-    image: quiz,
+    image: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=600&auto=format&fit=crop",
     languages: ["HTML", "CSS", "JavaScript"],
     category: "JavaScript",
-    link: "https://shorturl.at/SYfnh",
+    link: "https://quizz-go.netlify.app/",
   },
   {
     name: "E-commerce Platform",
     description:
       "A fully functional e-commerce website with key features such as user authentication, item management, and seamless data integration using APIs. The project demonstrates strong front-end development skills with a focus on responsive design and user experience",
-    image: ecommerce,
+    image: "https://images.unsplash.com/photo-1472851294608-062f824d296e?q=80&w=600&auto=format&fit=crop",
     languages: ["HTML", "CSS", "JavaScript"],
     category: "JavaScript",
-    link: "https://shorturl.at/y67xy",
+    link: "https://aditya2620.github.io/E-commerce-website/",
+  },
+  {
+    name: "Portfolio Website",
+    description:
+      "A personal developer portfolio website designed with responsive structures, smooth Framer Motion animations, glassmorphism UI accents, and floating interactive tech background overlays.",
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=600&auto=format&fit=crop",
+    languages: ["React.js", "Vite", "Framer Motion", "CSS3"],
+    category: "React",
+    link: "https://aditya2620.github.io/portfolio/",
   },
   {
     name: "Web Internship Projects",
     description: "Built responsive landing pages, interactive calculators, tribute showcases, and custom music player structures using vanilla HTML, CSS, and JavaScript during remote internships.",
-    image: portfolio,
+    image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=600&auto=format&fit=crop",
     languages: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
     category: "JavaScript",
-    link: "https://github.com",
+    link: "https://github.com/aditya2620/Sync-interns_Tasks",
   },
 ];
 
