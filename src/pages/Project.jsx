@@ -7,7 +7,7 @@ const projects = [
   {
     name: "TinyCommand.com",
     description:
-      "A no-code workflow automation platform. Developed reusable frontend components, built UI integrations, and consumed REST APIs utilizing React.js, TypeScript, and Agile sprint planning methodologies.",
+      "A no-code workflow automation platform. Contributed to the development of frontend features, built reusable React components, integrated REST APIs, and worked under Agile sprint planning methodologies.",
     image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop",
     languages: ["React.js", "TypeScript", "REST APIs", "Agile"],
     category: "React",
