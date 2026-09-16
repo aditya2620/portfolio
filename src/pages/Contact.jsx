@@ -177,36 +177,30 @@ export const Contact = () => {
         <div className="contact-socials">
           <span className="socials-divider-text">Connect with me</span>
           <div className="social-icons-row">
-            <a
-              href="https://www.linkedin.com/in/aditya-basanti/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={() => window.open("https://www.linkedin.com/in/aditya-basanti-11326623b", "_blank", "noopener,noreferrer")}
               className="social-icon-link linkedin"
               aria-label="LinkedIn Profile"
-              title="LinkedIn Profile"
             >
               <LinkedinIcon size={20} />
-            </a>
-            <a
-              href="https://twitter.com/aditya2620"
-              target="_blank"
-              rel="noopener noreferrer"
+            </button>
+            <button
+              type="button"
+              onClick={() => window.open("https://twitter.com/AdityaBasanti", "_blank", "noopener,noreferrer")}
               className="social-icon-link twitter"
               aria-label="Twitter Profile"
-              title="Twitter Profile"
             >
               <TwitterIcon size={20} />
-            </a>
-            <a
-              href="https://github.com/aditya2620"
-              target="_blank"
-              rel="noopener noreferrer"
+            </button>
+            <button
+              type="button"
+              onClick={() => window.open("https://github.com/aditya2620", "_blank", "noopener,noreferrer")}
               className="social-icon-link github"
               aria-label="GitHub Profile"
-              title="GitHub Profile"
             >
               <GithubIcon size={20} />
-            </a>
+            </button>
           </div>
         </div>
       </div>

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Project.css";
 import { Search, ExternalLink } from "lucide-react";
-import { GithubIcon } from "../components/SocialIcons";
 import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
@@ -13,7 +12,6 @@ const projects = [
     languages: ["React.js", "JavaScript", "Tailwind CSS", "Vercel"],
     category: "React",
     link: "https://smart-investment-advisor.vercel.app/",
-    githubLink: "https://github.com/aditya2620/Smart-Investment-Advisor",
   },
   {
     name: "TinyCommand.com",
@@ -160,38 +158,24 @@ export const Project = () => {
                     </span>
                   ))}
                 </div>
-                <div className="project-actions">
-                  {project.link ? (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link-btn"
-                    >
-                      <span>Live Project</span>
-                      <ExternalLink size={16} />
-                    </a>
-                  ) : (
-                    <button
-                      className="project-link-btn disabled"
-                      disabled
-                    >
-                      <span>Private Project</span>
-                    </button>
-                  )}
-                  {project.githubLink && (
-                    <a
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-github-btn"
-                      title="View GitHub Repository"
-                      aria-label="View GitHub Repository"
-                    >
-                      <GithubIcon size={18} />
-                    </a>
-                  )}
-                </div>
+                {project.link ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link-btn"
+                  >
+                    <span>Live Project</span>
+                    <ExternalLink size={16} />
+                  </a>
+                ) : (
+                  <button
+                    className="project-link-btn disabled"
+                    disabled
+                  >
+                    <span>Private Project</span>
+                  </button>
+                )}
               </div>
             </motion.div>
           ))}
