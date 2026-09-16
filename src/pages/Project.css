@@ -233,6 +233,39 @@
   transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
+.project-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: auto;
+}
+
+.project-actions .project-link-btn {
+  flex: 1;
+}
+
+.project-github-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: 12px;
+  transition: all var(--transition-speed) ease;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.project-github-btn:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-2px);
+  background-color: rgba(var(--accent-rgb), 0.08);
+}
+
 .project-link-btn {
   display: flex;
   align-items: center;

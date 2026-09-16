@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Profile from "../assets/Capture.png";
 
 export const Home = () => {
-  const words = ["Associate Software Engineer", "React.js Developer", "TypeScript Specialist", "Full Stack Engineer"];
+  const words = ["Associate Software Engineer", "React.js Developer", "TypeScript Developer", "Full Stack Engineer"];
   const [wordIndex, setWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);

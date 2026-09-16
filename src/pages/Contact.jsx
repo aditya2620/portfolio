@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
+import { LinkedinIcon, TwitterIcon, GithubIcon } from "../components/SocialIcons";
 import { motion, AnimatePresence } from "framer-motion";
 
 const EMAIL_ADDRESS = "adityabasanti02@gmail.com";
@@ -172,6 +173,42 @@ export const Contact = () => {
             <Send size={18} />
           </motion.button>
         </form>
+
+        <div className="contact-socials">
+          <span className="socials-divider-text">Connect with me</span>
+          <div className="social-icons-row">
+            <a
+              href="https://www.linkedin.com/in/aditya-basanti/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon-link linkedin"
+              aria-label="LinkedIn Profile"
+              title="LinkedIn Profile"
+            >
+              <LinkedinIcon size={20} />
+            </a>
+            <a
+              href="https://twitter.com/aditya2620"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon-link twitter"
+              aria-label="Twitter Profile"
+              title="Twitter Profile"
+            >
+              <TwitterIcon size={20} />
+            </a>
+            <a
+              href="https://github.com/aditya2620"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon-link github"
+              aria-label="GitHub Profile"
+              title="GitHub Profile"
+            >
+              <GithubIcon size={20} />
+            </a>
+          </div>
+        </div>
       </div>
     </motion.section>
   );
