@@ -13,17 +13,21 @@ export const Header = () => {
   return (
     <header className="header">
       <div className="header-logo-title">
-        <motion.img 
-          src={coding} 
-          alt="logo" 
-          className="header-logo"
-          width="40"
-          height="40"
-          whileHover={{ rotate: 15, scale: 1.05 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        />
-        <Link to="/" className="header-title" onClick={() => setIsMenuOpen(false)}>
-          Aditya Basanti
+        <Link to="/" onClick={() => setIsMenuOpen(false)} className="header-brand-link" aria-label="Home">
+          <motion.img 
+            src={coding} 
+            alt="logo" 
+            className="header-logo"
+            width="40"
+            height="40"
+            whileHover={{ rotate: 15, scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          />
+          <span className="header-title">
+            <span className="brand-bracket">&lt;</span>
+            <span className="brand-text">AB</span>
+            <span className="brand-bracket">&nbsp;/&gt;</span>
+          </span>
         </Link>
       </div>
 
