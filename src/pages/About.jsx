@@ -1,35 +1,53 @@
 import React, { useState } from "react";
 import "./About.css";
 import { motion, AnimatePresence } from "framer-motion";
+import { Code2, Layout, Server, Database, Wrench, Sparkles } from "lucide-react";
 
 const skills = [
   // Languages
-  { name: "TypeScript", category: "Languages", level: 90 },
-  { name: "JavaScript (ES6+)", category: "Languages", level: 90 },
-  { name: "Core Java", category: "Languages", level: 75 },
+  { name: "TypeScript", category: "Languages" },
+  { name: "JavaScript (ES6+)", category: "Languages" },
+  { name: "Core Java", category: "Languages" },
   
   // Frontend
-  { name: "React.js", category: "Frontend", level: 90 },
-  { name: "HTML5 & CSS3", category: "Frontend", level: 95 },
-  { name: "Responsive Design", category: "Frontend", level: 90 },
-  { name: "Component-Based Design", category: "Frontend", level: 90 },
+  { name: "React.js", category: "Frontend" },
+  { name: "HTML5 & CSS3", category: "Frontend" },
+  { name: "Responsive Design", category: "Frontend" },
+  { name: "Component-Based Design", category: "Frontend" },
 
   // Backend
-  { name: "Node.js", category: "Backend", level: 80 },
-  { name: "REST APIs Integration", category: "Backend", level: 85 },
+  { name: "Node.js", category: "Backend" },
+  { name: "REST APIs Integration", category: "Backend" },
 
   // Databases
-  { name: "SQL Server (SSMS)", category: "Databases", level: 80 },
-  { name: "Oracle SQL", category: "Databases", level: 75 },
+  { name: "SQL Server (SSMS)", category: "Databases" },
+  { name: "Oracle SQL", category: "Databases" },
 
   // Tools & Clouds
-  { name: "Git & GitHub", category: "Tools", level: 90 },
-  { name: "Antigravity IDE", category: "Tools", level: 95 },
-  { name: "Cursor IDE", category: "Tools", level: 90 },
-  { name: "Docker", category: "Tools", level: 75 },
-  { name: "GCP (Google Cloud)", category: "Tools", level: 70 },
-  { name: "AWS (Amazon Web Services)", category: "Tools", level: 70 }
+  { name: "Git & GitHub", category: "Tools" },
+  { name: "Antigravity IDE", category: "Tools" },
+  { name: "Cursor IDE", category: "Tools" },
+  { name: "Docker", category: "Tools" },
+  { name: "GCP (Google Cloud)", category: "Tools" },
+  { name: "AWS (Amazon Web Services)", category: "Tools" }
 ];
+
+const getCategoryIcon = (category) => {
+  switch (category) {
+    case "Languages":
+      return <Code2 size={18} />;
+    case "Frontend":
+      return <Layout size={18} />;
+    case "Backend":
+      return <Server size={18} />;
+    case "Databases":
+      return <Database size={18} />;
+    case "Tools":
+      return <Wrench size={18} />;
+    default:
+      return <Sparkles size={18} />;
+  }
+};
 
 const timeline = [
   {
@@ -118,24 +136,20 @@ export const About = () => {
               {filteredSkills.map(skill => (
                 <motion.div
                   key={skill.name}
-                  className="skill-item"
+                  className="skill-card"
                   layout
-                  initial={{ opacity: 0, scale: 0.9 }}
+                  initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.25 }}
+                  whileHover={{ y: -3, scale: 1.02 }}
                 >
-                  <div className="skill-info">
-                    <span className="skill-name">{skill.name}</span>
-                    <span className="skill-pct">{skill.level}%</span>
+                  <div className="skill-icon-box">
+                    {getCategoryIcon(skill.category)}
                   </div>
-                  <div className="skill-bar-bg">
-                    <motion.div 
-                      className="skill-bar-fill"
-                      initial={{ width: 0 }}
-                      animate={{ width: `${skill.level}%` }}
-                      transition={{ duration: 0.8, ease: "easeOut" }}
-                    />
+                  <div className="skill-details">
+                    <span className="skill-name">{skill.name}</span>
+                    <span className="skill-category-tag">{skill.category}</span>
                   </div>
                 </motion.div>
               ))}
