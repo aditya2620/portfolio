@@ -4,7 +4,7 @@
   justify-content: space-between;
   position: sticky;
   top: 1rem;
-  max-width: 1200px;
+  max-width: 1400px;
   width: calc(100% - 4rem);
   margin: 1rem auto;
   padding: 0.75rem 2rem;
@@ -223,4 +223,3 @@
     padding: 0.5rem 0;
   }
 }
-

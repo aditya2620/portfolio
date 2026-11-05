@@ -1,5 +1,5 @@
 .projects-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
   margin-bottom: 7rem;
@@ -37,7 +37,7 @@
 .search-bar {
   position: relative;
   flex: 1;
-  max-width: 350px;
+  max-width: 380px;
   min-width: 250px;
 }
 

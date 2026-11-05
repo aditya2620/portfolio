@@ -4,7 +4,7 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 4rem);
-  max-width: 1200px;
+  max-width: 1400px;
   background-color: var(--bg-header);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
