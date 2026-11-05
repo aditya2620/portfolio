@@ -109,9 +109,14 @@ export const About = () => {
     >
       <div className="about-header">
         <h2>About Me</h2>
-        <p>
-          I am Aditya Basanti, an Associate Software Engineer with nearly 2 years of experience building modern web experiences with React, TypeScript, and SQL databases.
-        </p>
+        <div className="about-bio">
+          <p>
+            I am an Associate Software Engineer at Instinct Innovations with nearly 2 years of experience specializing in building responsive, high-performance web applications using React.js, TypeScript, and modern JavaScript.
+          </p>
+          <p>
+            Throughout my journey—from graduating with a Computer Engineering degree to developing features for workflow automation platform TinyCommand.com and optimizing enterprise database systems with SQL Server—I've focused on turning complex workflows into seamless, intuitive digital experiences. I thrive on clean component architecture, snappy UI performance, and collaborative agile environments.
+          </p>
+        </div>
       </div>
 
       <div className="about-content">
