@@ -11,102 +11,31 @@
   transition: background-color var(--transition-speed) ease;
 }
 
-/* Shifting Blur Orbs */
-.orb {
+/* Subtle precision dot matrix */
+.bg-grid-pattern {
   position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(100, 116, 139, 0.16) 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 25%, #000 50%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 25%, #000 50%, transparent 100%);
+  opacity: 0.65;
+}
+
+:root.dark .bg-grid-pattern {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.14) 1px, transparent 1px);
+  opacity: 0.75;
+}
+
+/* Soft ambient falloff around the hero */
+.bg-radial-gradient {
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 600px;
   border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.15;
+  background: radial-gradient(circle, rgba(var(--accent-rgb), 0.05) 0%, transparent 70%);
   pointer-events: none;
-  animation: orbFloat 25s infinite alternate ease-in-out;
-  transition: filter var(--transition-speed) ease, opacity var(--transition-speed) ease;
-}
-
-/* Orb theme adaptations */
-:root.dark .orb {
-  opacity: 0.22;
-}
-
-.orb-1 {
-  width: 500px;
-  height: 500px;
-  background-color: rgba(167, 139, 250, 0.4); /* Violet */
-  top: -10%;
-  left: -10%;
-  animation-delay: 0s;
-}
-
-.orb-2 {
-  width: 450px;
-  height: 450px;
-  background-color: rgba(29, 209, 161, 0.3); /* Green */
-  bottom: -10%;
-  right: -10%;
-  animation-delay: 5s;
-}
-
-.orb-3 {
-  width: 350px;
-  height: 350px;
-  background-color: rgba(245, 158, 11, 0.25); /* Amber/Orange */
-  top: 40%;
-  left: 45%;
-  animation-delay: 10s;
-}
-
-@keyframes orbFloat {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(40px, -60px) scale(1.1);
-  }
-  66% {
-    transform: translate(-30px, 30px) scale(0.95);
-  }
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-}
-
-/* Floating Icons styling */
-.floating-icon {
-  position: absolute;
-  pointer-events: auto; /* Let them capture hover! */
-  opacity: 0.15; /* Increased to remain visible in light mode */
-  cursor: default;
-  transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
-  filter: saturate(0.8) contrast(0.95);
-}
-
-:root.dark .floating-icon {
-  opacity: 0.12; /* Slightly lower opacity on dark backgrounds for proper blending */
-  filter: saturate(1.1) brightness(1.1);
-}
-
-.floating-icon:hover {
-  opacity: 0.65 !important;
-  filter: saturate(1.3) brightness(1.2) drop-shadow(0 0 8px currentColor);
-}
-
-@media (max-width: 768px) {
-  .orb-1 {
-    width: 250px;
-    height: 250px;
-  }
-  .orb-2 {
-    width: 200px;
-    height: 200px;
-  }
-  .orb-3 {
-    display: none;
-  }
-  .orb {
-    filter: blur(60px);
-  }
-  
-  /* Reduce floating icons on mobile to save CPU and screen clutter */
-  .floating-icon:nth-child(even) {
-    display: none;
-  }
 }

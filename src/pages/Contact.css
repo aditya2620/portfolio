@@ -2,7 +2,7 @@
   max-width: 580px;
   margin: 0 auto;
   padding: 1rem 1.5rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 4rem;
 }
 
 .contact-header {
@@ -26,13 +26,13 @@
 
 .contact-card {
   background: var(--bg-secondary);
-  border-radius: 16px;
+  border-radius: 12px;
   border: 1px solid var(--border-color);
   padding: 1.75rem 2rem;
   box-shadow: var(--card-shadow);
   position: relative;
   overflow: hidden;
-  transition: border-color var(--transition-speed) ease, background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  transition: border-color var(--transition-speed) ease, background-color var(--transition-speed) ease;
 }
 
 .contact-form {
@@ -51,11 +51,11 @@
   background-color: var(--bg-primary);
   border: 1px solid var(--border-color);
   color: var(--text-primary);
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 0.92rem;
   font-family: inherit;
   outline: none;
-  transition: all var(--transition-speed) ease;
+  transition: border-color var(--transition-speed) ease, background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
 .form-textarea {
@@ -98,7 +98,7 @@
   color: #ffffff;
   border: none;
   padding: 0.75rem;
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
@@ -227,21 +227,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
   background-color: var(--bg-primary);
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-speed) ease, border-color var(--transition-speed) ease, background-color var(--transition-speed) ease;
   text-decoration: none;
   cursor: pointer;
   outline: none;
 }
 
 .social-icon-link:hover {
-  transform: translateY(-3px) scale(1.06);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .social-icon-link.linkedin:hover {

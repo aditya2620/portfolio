@@ -52,7 +52,7 @@ const projects = [
   {
     name: "Portfolio Website",
     description:
-      "A personal developer portfolio website designed with responsive structures, smooth Framer Motion animations, glassmorphism UI accents, and floating interactive tech background overlays.",
+      "A personal developer portfolio and project showcase built with React 18, Vite, and custom CSS design tokens, featuring dark/light mode persistence and performant responsive layouts.",
     image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=600&auto=format&fit=crop",
     languages: ["React.js", "Vite", "Framer Motion", "CSS3"],
     category: "React",

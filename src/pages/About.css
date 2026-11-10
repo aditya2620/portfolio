@@ -2,7 +2,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
 .about-header {
@@ -77,26 +77,24 @@
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
-  padding: 0.45rem 1.1rem;
+  padding: 0.45rem 1rem;
   font-size: 0.85rem;
-  font-weight: 600;
-  border-radius: 30px;
+  font-weight: 500;
+  border-radius: 8px;
   cursor: pointer;
   box-shadow: var(--card-shadow);
-  transition: all var(--transition-speed) ease;
+  transition: color var(--transition-speed) ease, border-color var(--transition-speed) ease, background-color var(--transition-speed) ease;
 }
 
 .filter-btn:hover {
   border-color: var(--accent-color);
   color: var(--accent-color);
-  transform: translateY(-1px);
 }
 
 .filter-btn.active {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.3);
 }
 
 .skills-grid {
@@ -111,7 +109,7 @@
   gap: 0.85rem;
   background: var(--bg-secondary);
   padding: 0.85rem 1rem;
-  border-radius: 12px;
+  border-radius: 10px;
   border: 1px solid var(--border-color);
   box-shadow: var(--card-shadow);
   transition: border-color var(--transition-speed) ease,
@@ -123,26 +121,24 @@
 
 .skill-card:hover {
   border-color: var(--accent-color);
-  box-shadow: 0 8px 20px -6px rgba(var(--accent-rgb), 0.25);
 }
 
 .skill-icon-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  background: rgba(var(--accent-rgb), 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 7px;
+  background: rgba(var(--accent-rgb), 0.08);
   color: var(--accent-color);
   flex-shrink: 0;
-  transition: all var(--transition-speed) ease;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
 .skill-card:hover .skill-icon-box {
   background: var(--accent-color);
   color: #ffffff;
-  transform: scale(1.05);
 }
 
 .skill-details {
@@ -199,7 +195,7 @@
 .timeline-card {
   background: var(--bg-secondary);
   padding: 1.5rem;
-  border-radius: 12px;
+  border-radius: 10px;
   border: 1px solid var(--border-color);
   box-shadow: var(--card-shadow);
   transition: border-color var(--transition-speed) ease, background-color var(--transition-speed) ease;
@@ -253,16 +249,15 @@
 
 .leadership-card {
   background: var(--bg-secondary);
-  padding: 2rem;
-  border-radius: 16px;
+  padding: 1.75rem;
+  border-radius: 10px;
   border: 1px solid var(--border-color);
   box-shadow: var(--card-shadow);
-  transition: all var(--transition-speed) ease;
+  transition: border-color var(--transition-speed) ease, transform var(--transition-speed) ease;
 }
 
 .leadership-card:hover {
   border-color: var(--accent-color);
-  transform: translateY(-2px);
 }
 
 .leadership-role {
